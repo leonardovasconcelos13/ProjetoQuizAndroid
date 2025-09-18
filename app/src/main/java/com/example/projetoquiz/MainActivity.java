@@ -43,11 +43,28 @@ public class MainActivity extends AppCompatActivity {
         txvPergunta = findViewById(R.id.txvPergunta);
         rdg_principal = findViewById(R.id.rdg_principal);
         btnResponder = findViewById(R.id.btn_responder);
-                
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
     }
+
+    private void carregarPerguntas(){
+        if(indicePergunta < perguntas.length){
+            //Pegar pergunta do vetor criado
+            txvPergunta.setText(perguntas[indicePergunta]);
+            //Esvasiar marcação da radio caso haja
+            rdg_principal.clearCheck();
+            //Deixar o botão responder habilitado
+            btnResponder.setEnabled(true);
+        }else{
+            //Finalizar quiz
+            txvPergunta.setText("Fim");
+            //Desabilitar o botão de resposta
+            btnResponder.setEnabled(false);
+        }
+    }
+
 }
