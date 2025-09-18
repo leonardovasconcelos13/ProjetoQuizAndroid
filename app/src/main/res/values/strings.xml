@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">ProjetoQuiz</string>
+    <string name="app_name">Quizes</string>
+    <string name="txt_alternativo_a">Resposta 1</string>
+    <string name="txt_alternativo_b">Resposta 2</string>
+    <string name="txt_alternativo_c">Resposta 3</string>
+    <string name="txt_alternativo_d">Resposta 4</string>
+    <string name="txt_pergunta_1">Espaço de pergunta</string>
+    <string name="txt_btn">RESPONDER</string>
 </resources>
